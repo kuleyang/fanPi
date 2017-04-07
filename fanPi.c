@@ -1,5 +1,5 @@
 /* COMP3000 - Final Project
- * fanPi Kernel Module...Fuck it issa driver.
+ * fanPi Kernel Module...I mean driver..
  * Used to send commands to the device GPIO
  */
 
@@ -27,7 +27,7 @@ static char fstatus[256] = "OFF";
 static struct gpio fan = {17, GPIOF_OUT_INIT_LOW, "Fan"};
 //static unsigned int fan = 17;
 
-//Values for driver numbers and shit.
+//Values for driver numbers.
 static int err, majorNumber, numberOpens = 0;
 static short statusSize;
 
@@ -47,7 +47,7 @@ static struct file_operations fops = {
    .release = dev_release,
 };
 
-//Initialize the shit
+//Initialize the fan
 static int __init fanPi_init(void) {
 	printk(KERN_INFO "fanPi: initializing\n");
 	
